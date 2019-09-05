@@ -1,0 +1,10 @@
+.hero {
+  display: grid;
+  grid-template-columns: minmax(1.5em, 1fr) minmax(0, 500px) minmax(1.5em, 1fr);
+  background-image: url("../images/honeyinbottle.jpg");
+  color: #fff;
+}
+
+.hero > * {
+  grid-column: 2 / -2;
+}
