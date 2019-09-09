@@ -19,13 +19,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `80%`,
-          paddingTop: 0,
-        }}
-      >
+      <div>
         <main>{children}</main>
         <footer>© {new Date().getFullYear()}, Son &amp; Ness Enterprise</footer>
       </div>

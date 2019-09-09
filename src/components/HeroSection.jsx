@@ -1,23 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import HeroStyles from "./HeroSection.module.scss"
 
+import HeroImage from "../components/image-gatsby/home-hero"
+
 const HeroSection = () => (
-  <section className="HeroStyles.hero">
-    <h1 className="HeroStyles.title">
-      The only marketing agency on{" "}
-      <span class="HeroStyles.accent-color">a mission from God</span>, fully
-      dedicated to increase your web traffic.
-    </h1>
-    <p className="HeroStyles.subtitle">
-      We’re two brothers from Chicago that are trying to pay back our debt. We
-      can help you with <strong>SEO, SEM content marketing</strong> and whatever
-      else.
-    </p>
-    <Link to="/contact" className="HeroStyles.btn-primary">
-      Contact Test
-    </Link>
+  <section className={HeroStyles.container}>
+    <HeroImage />
+    <div className={HeroStyles.hero}>
+      <h1 className={HeroStyles.title}>100% Raw Honey Wholesales</h1>
+      <p className={HeroStyles.subtitle}>We Collect Direct from Bee Farm</p>
+    </div>
   </section>
 )
 
