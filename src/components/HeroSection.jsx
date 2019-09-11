@@ -8,8 +8,8 @@ const HeroSection = () => (
   <section className={HeroStyles.container}>
     <HeroImage />
     <div className={HeroStyles.hero}>
-      <h1 className={HeroStyles.title}>100% Raw Honey Wholesales</h1>
-      <p className={HeroStyles.subtitle}>We Collect Direct from Bee Farm</p>
+      <h1 className={HeroStyles.title}>Raw Honey Wholesales</h1>
+      <p className={HeroStyles.subtitle}>Direct from Bee Farm</p>
     </div>
   </section>
 )

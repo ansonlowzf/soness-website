@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Son & Ness Enterprise`,
-    description: `Raw honey direct from bee farm in Malaysia. We do wholesale & retail in Kuala Lumpur. Resellers are welcome`,
+    title: `Sonness`,
+    description: `Wholesale Raw honey direct from bee farm in Malaysia. Resellers are welcome`,
     author: `@Anson Low Z.F`,
   },
   plugins: [

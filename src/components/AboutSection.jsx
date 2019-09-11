@@ -2,29 +2,38 @@ import React from "react"
 
 import AboutStyles from "./AboutSection.module.scss"
 
+import AnsonTakeHoney from "../components/image-gatsby/anson-take-honey"
+
 const AboutSection = () => (
-  <section>
-    <h2>About Us</h2>
-    <p>Health care drinker to honey wholeseller</p>
-    <p>We were buying honey in the supermarket few years ago</p>
-    <p>Relative said we should buy from pasar pagi for pure honey and we did</p>
+  <section className={AboutStyles.wrapper}>
+    <h2 className={AboutStyles.heading}>About Us</h2>
+    <p className={AboutStyles.highlight}>
+      From Health care purpose to honey wholeseller today
+    </p>
+    <p>We once were buying honey in the supermarket</p>
+    <p>Relative said we should buy from "Pasar Pagi" for pure honey</p>
     <p>
-      Some friend said we should try orang asli's raw honey, we bought some
-      beside the highway
+      A friend said we should try "orang asli" raw honey, we bought some beside
+      the highway
     </p>
     <p>
-      Another friend said we should buy from famous local brand for real honey
+      Another friend said we should buy honey from famous and branded local herb
+      shop for real raw honey, RM 2xx but worth it!
     </p>
-    <p>Government said 80% of honey selling in the market was not pure</p>
+    <p>Government said 80% of honey selling in the market was not 100% pure</p>
     <p>
-      What the...? we just want to drink for health care, Why it's so
-      complicated?
+      Why...? it's so difficult? We just want to drink honey for health care!
     </p>
-    <p>Until, we met a bee farmer, we learned what is surcose, frustose</p>
     <p>
-      We decide to make the real raw and pure honey easy accessable in the
-      market
+      Until... we had a chance to meet a bee farmer, we learned what is surcose,
+      frustose
     </p>
+    <p>Today, we are drinking the real raw honey direct from bee farm</p>
+    <p>
+      Hence, we make real raw honey easy accessisable by honey health care
+      drinker
+    </p>
+    <AnsonTakeHoney />
   </section>
 )
 
