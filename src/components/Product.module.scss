@@ -1,0 +1,28 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: minmax(1fr, autofit);
+  row-gap: 1em;
+}
+
+.card {
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  box-shadow: 2px 2px 2px #aaa;
+  padding: 1em;
+}
+
+.title {
+  text-align: center;
+}
+
+.priceInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 601px) {
+  .wrapper {
+    margin: 0 auto;
+    width: 90%;
+  }
+}

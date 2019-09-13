@@ -5,7 +5,7 @@ import AboutStyles from "./AboutSection.module.scss"
 import AnsonTakeHoney from "../components/image-gatsby/anson-take-honey"
 
 const AboutSection = () => (
-  <section className={AboutStyles.wrapper}>
+  <div>
     <h2 className={AboutStyles.heading}>About Us</h2>
     <p className={AboutStyles.highlight}>
       From Health care purpose to honey wholeseller today
@@ -34,7 +34,7 @@ const AboutSection = () => (
       drinker
     </p>
     <AnsonTakeHoney />
-  </section>
+  </div>
 )
 
 export default AboutSection
