@@ -7,7 +7,7 @@ const AnsonTakeHoney = () => {
     query {
       placeholderImage: file(relativePath: { eq: "ansontakehoney.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 600, maxHeight: 900) {
+          fluid {
             ...GatsbyImageSharpFluid
           }
         }

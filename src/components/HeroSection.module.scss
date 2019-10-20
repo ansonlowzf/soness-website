@@ -1,9 +1,0 @@
-.hero {
-  display: grid;
-  grid-template-columns: minmax(1em, 1fr) minmax(0, 500px) minmax(1em, 1fr);
-}
-
-.hero > * {
-  grid-column: 2 / -2;
-  text-align: center;
-}
