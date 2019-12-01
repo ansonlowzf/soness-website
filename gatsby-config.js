@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Sonness`,
+    title: `Soness`,
     description: `Wholesale Raw honey direct from bee farm in Malaysia. Resellers are welcome`,
     author: `@Anson Low Z.F`,
   },

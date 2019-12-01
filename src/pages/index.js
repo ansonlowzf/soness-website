@@ -3,10 +3,12 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
+import Homepage from "../components/homepage"
+
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>This is an index page</h1>
+    <SEO title="Homepage" />
+    <Homepage />
   </Layout>
 )
 
