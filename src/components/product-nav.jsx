@@ -8,6 +8,7 @@ const NavContainer = styled.nav`
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  margin-bottom: 2em;
 `
 const ProductWrapper = styled.div`
   max-width: 980px;

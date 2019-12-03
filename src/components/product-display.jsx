@@ -1,31 +1,26 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 const ProductDisplayContainer = styled.section`
-  display: flex;
-  flex-direction: column;
-  outline: 1px solid black;
   height: calc(100vh - 10vh);
-`
-
-const ProductHeader = styled.header`
-  flex-basis: auto;
-  display: flex;
-  justify-content: space-between;
-  flex-basis: 20%;
 `
 
 const ProductDisplay = () => {
   return (
     <ProductDisplayContainer>
-      <ProductHeader>
-        <h2>Mix Flower Honey</h2>
-        <p>RM 580</p>
-      </ProductHeader>
-      <div style={{ flexBasis: `50%` }}>
+      <h1 style={{ textAlign: `center` }}>Mix Flower Honey</h1>
+      <p style={{ textAlign: `center` }}>RM 580 / 10 KG / Bottle</p>
+
+      <div>
         <img src="#" alt="product" />
       </div>
-      <p>This is a description</p>
+      <p style={{ maxWidth: `600px` }}>
+        Most fragrant honey in our list, countless flower surround the beehive.
+        Multi flower fragrant smell and taste sweet only. Honey is filtered and
+        pack in food grade bottles
+      </p>
+      <Link>Next</Link>
     </ProductDisplayContainer>
   )
 }
