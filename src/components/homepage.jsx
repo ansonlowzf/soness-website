@@ -1,25 +1,64 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 
-const HomepageContainer = styled.div`
+const ImageBackground = styled(BackgroundImage)`
+  background-position: center center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+`
+
+const BackgroundOverlay = styled.div`
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const TextBox = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 600px) {
+    padding: 1em;
+  }
 `
 
 const Homepage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "honey-in-bottle.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   return (
-    <HomepageContainer>
-      <div>
-        <h1>Son &amp; Ness Enterprise</h1>
-        <p style={{ fontSize: `1.5rem` }}>
-          Wholesales Raw Honey in Kuala Lumpur
-        </p>
-        <Link to="/products">Products &rarr;</Link>
-      </div>
-    </HomepageContainer>
+    <ImageBackground
+      Tag="section"
+      fluid={data.placeholderImage.childImageSharp.fluid}
+    >
+      <BackgroundOverlay>
+        <TextBox>
+          <h1 style={{ color: `white` }}>Son &amp; Ness Enterprise</h1>
+          <p style={{ fontSize: `1.5rem`, color: `white` }}>
+            Wholesales Raw Honey in Kuala Lumpur
+          </p>
+          <Link to="/product/mixed-flower-honey">Products &rarr;</Link>
+        </TextBox>
+      </BackgroundOverlay>
+    </ImageBackground>
   )
 }
 

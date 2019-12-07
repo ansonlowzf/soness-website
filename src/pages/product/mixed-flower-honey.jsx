@@ -30,7 +30,7 @@ const ProductPage = () => {
       <ProductNavbar />
       <Layout>
         <ProductDisplay
-          title={`Mix Flower Honey`}
+          title={`Mixed Flower Honey`}
           price={`RM 580 / 10kg / Bottle`}
           imageData={MixedFlowerHoney.placeholderImage.childImageSharp.fluid}
           description={`Most fragrant honey in our list, countless flower surround the beehive.
