@@ -39,7 +39,7 @@ const ProductPage = () => {
         />
         <ProductLinkNavigation>
           <Link to="/product/royal-jelly">&larr;Previous</Link>
-          <Link>Contact</Link>
+          <Link to="/contact">Contact</Link>
           <Link to="/product/royal-jelly">Next&rarr;</Link>
         </ProductLinkNavigation>
       </Layout>
