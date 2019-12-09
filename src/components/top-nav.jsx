@@ -35,9 +35,9 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const NavLinks = [
-  { title: `About Us`, path: `/about-us` },
-  { title: `Product`, path: `/product` },
-  { title: `Contact Us`, path: `/contact-us` },
+  { title: `ABOUT US`, path: `/about-us` },
+  { title: `PRODUCT`, path: `/product` },
+  { title: `CONTACT US`, path: `/contact-us` },
 ]
 
 const TopNavigation = () => {
@@ -86,7 +86,7 @@ const TopNavigation = () => {
       {NavLinks.map(({ title, path, index }) => (
         <Link to={path} key={index} className={classes.linkText}>
           <ListItem button>
-            <ListItemText primary={title} />
+            <ListItemText primary={title} inset />
           </ListItem>
         </Link>
       ))}

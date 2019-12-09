@@ -1,16 +1,18 @@
 import React from "react"
-import styled from "styled-components"
 import Layout from "../../components/Layout"
 import { useStaticQuery, graphql } from "gatsby"
-import { Link } from "gatsby"
 
-import TopNavigation from "../../components/top-nav"
 import ProductDisplay from "../../components/product-display"
 
-const ProductLinkNavigation = styled.div`
-  display: flex;
-  justify-content: space-between;
-`
+const Honey = [
+  {
+    title: `Mixed Flower Honey`,
+    price: `RM 580 / 10 kg / Bottle`,
+    description: `Most fragrant honey in our list, countless flower surround the beehive.
+Multiple flower fragrant smell and taste sweet only. Honey is filtered
+and pack in food grade bottles`,
+  },
+]
 
 const ProductPage = () => {
   const MixedFlowerHoney = useStaticQuery(graphql`
@@ -28,7 +30,6 @@ const ProductPage = () => {
   return (
     <>
       <Layout>
-        <TopNavigation />
         <ProductDisplay
           title={`Mixed Flower Honey`}
           price={`RM 580 / 10kg / Bottle`}
@@ -37,11 +38,6 @@ const ProductPage = () => {
           Multiple flower fragrant smell and taste sweet only. Honey is filtered
           and pack in food grade bottles`}
         />
-        <ProductLinkNavigation>
-          <Link to="/product/royal-jelly">&larr;Previous</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/product/royal-jelly">Next&rarr;</Link>
-        </ProductLinkNavigation>
       </Layout>
     </>
   )
