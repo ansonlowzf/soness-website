@@ -30,7 +30,6 @@ const useStyles = makeStyles(theme => ({
   },
   linkText: {
     textDecoration: "none",
-    listStyle: "none",
     color: theme.palette.common.black,
   },
 }))
