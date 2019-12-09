@@ -4,7 +4,7 @@ import Layout from "../../components/Layout"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 
-import ProductNavbar from "../../components/product-nav"
+import TopNavigation from "../../components/top-nav"
 import ProductDisplay from "../../components/product-display"
 
 const ProductLinkNavigation = styled.div`
@@ -27,8 +27,8 @@ const ProductPage = () => {
 
   return (
     <>
-      <ProductNavbar />
       <Layout>
+        <TopNavigation />
         <ProductDisplay
           title={`Mixed Flower Honey`}
           price={`RM 580 / 10kg / Bottle`}
