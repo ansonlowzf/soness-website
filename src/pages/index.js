@@ -4,38 +4,13 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import SEO from "../components/seo"
 
-import { ThemeProvider, createMuiTheme } from "@material-ui/core"
-import { Button } from "@material-ui/core"
-import { green } from "@material-ui/core/colors"
-
-const theme = createMuiTheme({
-  palette: {
-    primary: green,
-  },
-})
+import Layout from "../components/Layout"
+import { Button, Grid, Typography } from "@material-ui/core"
 
 const ImageBackground = styled(BackgroundImage)`
   background-position: center center;
   background-size: cover;
-  height: 100vh;
-`
-
-const BackgroundOverlay = styled.div`
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
-const TextBox = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  @media (max-width: 600px) {
-    padding: 1em;
-  }
+  height: calc(100vh - 64px);
 `
 
 const IndexPage = () => {
@@ -54,17 +29,38 @@ const IndexPage = () => {
   return (
     <>
       <SEO title="Homepage" />
-      <ThemeProvider theme={theme}>
+      <Layout>
         <ImageBackground
           Tag="section"
           fluid={data.placeholderImage.childImageSharp.fluid}
         >
-          <BackgroundOverlay>
-            <TextBox>
-              <h1 style={{ color: `white` }}>Son &amp; Ness Enterprise</h1>
-              <p style={{ fontSize: `1.5rem`, color: `white` }}>
+          <Grid
+            style={{
+              width: `100%`,
+              height: `100%`,
+              backgroundColor: `rgba(0, 0, 0, 0.5)`,
+            }}
+            container
+            justify="center"
+            alignItems="center"
+          >
+            <Grid item>
+              <Typography
+                variant="h2"
+                component="h1"
+                gutterBottom
+                style={{ color: `white` }}
+              >
+                Son &amp; Ness Enterprise
+              </Typography>
+              <Typography
+                variant="h4"
+                component="p"
+                gutterBottom
+                style={{ color: `white`, marginBottom: `1em` }}
+              >
                 Wholesales Raw Honey in Kuala Lumpur
-              </p>
+              </Typography>
               <Link
                 to="/product/mixed-flower-honey"
                 style={{ textDecoration: `none` }}
@@ -72,16 +68,16 @@ const IndexPage = () => {
                 <Button
                   variant="contained"
                   aria-label="product page"
-                  color="primary"
+                  color="secondary"
                   size="large"
                 >
-                  Product &rarr;
+                  Discover &rarr;
                 </Button>
               </Link>
-            </TextBox>
-          </BackgroundOverlay>
+            </Grid>
+          </Grid>
         </ImageBackground>
-      </ThemeProvider>
+      </Layout>
     </>
   )
 }
