@@ -1,19 +1,29 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { CssBaseline, ThemeProvider, createMuiTheme } from "@material-ui/core"
-import green from "@material-ui/core/colors/green"
+import TopNavigation from "../components/top-nav"
+import { CssBaseline } from "@material-ui/core"
+import {
+  ThemeProvider,
+  createMuiTheme,
+  responsiveFontSizes,
+} from "@material-ui/core/styles"
+import { green, amber } from "@material-ui/core/colors"
 
-const theme = createMuiTheme({
+let theme = createMuiTheme({
   palette: {
     primary: green,
+    secondary: amber,
   },
 })
+
+theme = responsiveFontSizes(theme)
 
 const Layout = ({ children }) => {
   return (
     <>
       <CssBaseline />
       <ThemeProvider theme={theme}>
+        <TopNavigation />
         <main>{children}</main>
       </ThemeProvider>
     </>
