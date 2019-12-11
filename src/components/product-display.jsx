@@ -5,6 +5,9 @@ import { makeStyles } from "@material-ui/core/styles"
 import { Button, Typography, Grid, Paper } from "@material-ui/core"
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+  },
   headingTopMargin: {
     marginTop: `1em`,
   },
@@ -29,7 +32,7 @@ const ProductDisplay = ({
   const classes = useStyles()
 
   return (
-    <>
+    <div className={classes.root}>
       <Typography
         variant="h2"
         component="h1"
@@ -81,7 +84,7 @@ const ProductDisplay = ({
           </Button>
         </Grid>
       </Grid>
-    </>
+    </div>
   )
 }
 

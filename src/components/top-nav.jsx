@@ -25,16 +25,21 @@ const useStyles = makeStyles(theme => ({
   title: {
     flexGrow: 1,
   },
-  list: {
+  drawer: {
     width: 250,
   },
   linkText: {
     textDecoration: "none",
     color: theme.palette.common.black,
   },
+  drawerLinkText: {
+    textDecoration: "none",
+    color: theme.palette.primary.main,
+  },
 }))
 
 const NavLinks = [
+  { title: `HOME`, path: `/` },
   { title: `ABOUT US`, path: `/about-us` },
   { title: `PRODUCT`, path: `/product/mixed-flower-honey` },
   { title: `CONTACT US`, path: `/contact-us` },
@@ -61,14 +66,14 @@ const TopNavigation = () => {
 
   const sideDrawer = side => (
     <div
-      className={classes.list}
+      className={classes.drawer}
       role="presentation"
       onClick={toggleDrawer(side, false)}
       onKeyDown={toggleDrawer(side, false)}
     >
-      <List component="nav" aria-labelledby="side navigation">
+      <List component="nav" aria-labelledby="side drawer">
         {NavLinks.map(({ title, path }) => (
-          <Link to={path} key={title}>
+          <Link to={path} key={title} className={classes.drawerLinkText}>
             <ListItem button>
               <ListItemText primary={title} />
             </ListItem>
