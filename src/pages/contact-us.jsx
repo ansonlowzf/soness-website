@@ -54,6 +54,7 @@ const ContactPage = () => {
           >
             Contact Me
           </Typography>
+
           <Avatar className={classes.bigAvatar}>
             <Img fixed={data.placeholderImage.childImageSharp.fixed} />
           </Avatar>
