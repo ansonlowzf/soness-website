@@ -1,5 +1,11 @@
 export const questionAnswers = [
-  { question: `this is question 1`, answer: `this is answer 1` },
-  { question: `this is question 2`, answer: `this is answer 2` },
-  { question: `this is question 3`, answer: `this is answer 3` },
+  {
+    question: `Raw vs Pure, what is the difference?`,
+    answer: `Raw honey is not pure honey. Raw refer to unprocessed honey. `,
+  },
+  {
+    question: `Why people process raw honey?`,
+    answer: `Can keep for long time`,
+  },
+  { question: `What are those process?`, answer: `Heating` },
 ]
