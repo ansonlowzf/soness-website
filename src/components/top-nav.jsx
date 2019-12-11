@@ -36,8 +36,9 @@ const useStyles = makeStyles(theme => ({
 
 const NavLinks = [
   { title: `ABOUT US`, path: `/about-us` },
-  { title: `PRODUCT`, path: `/product` },
+  { title: `PRODUCT`, path: `/product/mixed-flower-honey` },
   { title: `CONTACT US`, path: `/contact-us` },
+  { title: `FAQ`, path: `/faq` },
 ]
 
 const TopNavigation = () => {
@@ -66,8 +67,8 @@ const TopNavigation = () => {
       onKeyDown={toggleDrawer(side, false)}
     >
       <List component="nav" aria-labelledby="side navigation">
-        {NavLinks.map(({ title, path, index }) => (
-          <Link to={path} key={index}>
+        {NavLinks.map(({ title, path }) => (
+          <Link to={path} key={title}>
             <ListItem button>
               <ListItemText primary={title} />
             </ListItem>
@@ -83,10 +84,10 @@ const TopNavigation = () => {
       aria-labelledby="main navigation"
       style={{ display: `flex` }}
     >
-      {NavLinks.map(({ title, path, index }) => (
-        <Link to={path} key={index} className={classes.linkText}>
+      {NavLinks.map(({ title, path }) => (
+        <Link to={path} key={title} className={classes.linkText}>
           <ListItem button>
-            <ListItemText primary={title} inset />
+            <ListItemText primary={title} />
           </ListItem>
         </Link>
       ))}
