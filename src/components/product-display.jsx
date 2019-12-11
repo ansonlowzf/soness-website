@@ -1,45 +1,86 @@
-import React, { useState } from "react"
+import React from "react"
+import { Link } from "gatsby"
 import Img from "gatsby-image"
 import { makeStyles } from "@material-ui/core/styles"
-import { Paper, Tabs, Tab } from "@material-ui/core"
+import { Button, Typography, Grid, Paper } from "@material-ui/core"
 
-const useStyles = makeStyles({
-  root: {
-    flexGrow: 1,
+const useStyles = makeStyles(theme => ({
+  headingTopMargin: {
+    marginTop: `1em`,
   },
-})
+  sectionMargin: {
+    marginTop: `2em`,
+    marginBottom: `2em`,
+  },
+  linkText: {
+    textDecoration: `none`,
+    color: theme.palette.common.black,
+  },
+}))
 
-const ProductDisplay = ({ title, price, imageData, description }) => {
+const ProductDisplay = ({
+  imageData,
+  title,
+  price,
+  description,
+  previousProduct,
+  nextProduct,
+}) => {
   const classes = useStyles()
-  const [value, setValue] = useState(0)
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue)
-  }
 
   return (
     <>
-      <h1 style={{ textAlign: `center` }}>{title}</h1>
-      <p style={{ textAlign: `center` }}>{price}</p>
+      <Typography
+        variant="h2"
+        component="h1"
+        align="center"
+        gutterBottom
+        className={classes.headingTopMargin}
+      >
+        {title}
+      </Typography>
 
-      <div style={{ maxWidth: `500px`, margin: `0 auto` }}>
-        <Img fluid={imageData} />
-      </div>
+      <Typography variant="h6" component="p" align="center" gutterBottom>
+        {price}
+      </Typography>
 
-      <p style={{ maxWidth: `500px`, margin: `1em auto` }}>{description}</p>
-      <Paper className={classes.root}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          indicatorColor="primary"
-          textColor="primary"
-          centered
+      <Grid container justify="center" className={classes.headingTopMargin}>
+        <Grid item xs={11} md={5}>
+          <Paper>
+            <Img fluid={imageData} />
+          </Paper>
+        </Grid>
+      </Grid>
+
+      <Grid container justify="center" className={classes.headingTopMargin}>
+        <Grid item xs={11} md={4}>
+          <Typography variant="body1" component="p" gutterBottom>
+            {description}
+          </Typography>
+        </Grid>
+      </Grid>
+
+      <Grid container justify="center" className={classes.headingTopMargin}>
+        <Grid
+          container
+          item
+          justify="space-between"
+          xs={11}
+          md={5}
+          className={classes.sectionMargin}
         >
-          <Tab label="Item One" />
-          <Tab label="Item Two" />
-          <Tab label="Item Three" />
-        </Tabs>
-      </Paper>
+          <Button variant="contained" color="primary">
+            <Link to={previousProduct} className={classes.linkText}>
+              Previous
+            </Link>
+          </Button>
+          <Button variant="contained" color="primary">
+            <Link to={nextProduct} className={classes.linkText}>
+              Next
+            </Link>
+          </Button>
+        </Grid>
+      </Grid>
     </>
   )
 }

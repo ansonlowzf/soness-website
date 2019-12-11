@@ -1,19 +1,17 @@
 import React from "react"
-import styled from "styled-components"
 import Layout from "../../components/Layout"
 import { useStaticQuery, graphql } from "gatsby"
-import { Link } from "gatsby"
+import { products } from "../../products"
 
-import ProductNavbar from "../../components/product-nav"
 import ProductDisplay from "../../components/product-display"
 
-const ProductLinkNavigation = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 2em;
-`
+const RoyalJellyPage = () => {
+  const title = products[2].title
+  const price = products[2].price
+  const description = products[2].description
+  const previousProduct = products[2].previousProduct
+  const nextProduct = products[2].nextProduct
 
-const ProductPage = () => {
   const RoyalJelly = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "royal-jelly.jpg" }) {
@@ -28,22 +26,18 @@ const ProductPage = () => {
 
   return (
     <>
-      <ProductNavbar />
       <Layout>
         <ProductDisplay
-          title={`Royal Jelly`}
-          price={`RM 200 / 0.25kg / Bottle`}
           imageData={RoyalJelly.placeholderImage.childImageSharp.fluid}
-          description={`Must keep in freezer`}
+          title={title}
+          price={price}
+          description={description}
+          previousProduct={previousProduct}
+          nextProduct={nextProduct}
         />
-        <ProductLinkNavigation>
-          <Link to="/product/mixed-flower-honey">&larr;Previous</Link>
-          <Link>Contact</Link>
-          <Link to="/product/mixed-flower-honey">Next&rarr;</Link>
-        </ProductLinkNavigation>
       </Layout>
     </>
   )
 }
 
-export default ProductPage
+export default RoyalJellyPage
