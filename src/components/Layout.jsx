@@ -14,6 +14,11 @@ let theme = createMuiTheme({
     primary: green,
     secondary: amber,
   },
+  typography: {
+    h2: {
+      fontWeight: 700,
+    },
+  },
 })
 
 theme = responsiveFontSizes(theme)

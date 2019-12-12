@@ -44,7 +44,7 @@ const IndexPage = () => {
             justify="center"
             alignItems="center"
           >
-            <Grid item>
+            <Grid item style={{ padding: `1em` }}>
               <Typography
                 variant="h2"
                 component="h1"

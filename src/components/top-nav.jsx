@@ -36,6 +36,9 @@ const useStyles = makeStyles(theme => ({
     textDecoration: "none",
     color: theme.palette.primary.main,
   },
+  isActive: {
+    color: theme.palette.secondary.main,
+  },
 }))
 
 const NavLinks = [
@@ -73,7 +76,12 @@ const TopNavigation = () => {
     >
       <List component="nav" aria-labelledby="side drawer">
         {NavLinks.map(({ title, path }) => (
-          <Link to={path} key={title} className={classes.drawerLinkText}>
+          <Link
+            to={path}
+            key={title}
+            className={classes.drawerLinkText}
+            activeClassName={classes.isActive}
+          >
             <ListItem button>
               <ListItemText primary={title} />
             </ListItem>
@@ -90,7 +98,12 @@ const TopNavigation = () => {
       style={{ display: `flex` }}
     >
       {NavLinks.map(({ title, path }) => (
-        <Link to={path} key={title} className={classes.linkText}>
+        <Link
+          to={path}
+          key={title}
+          className={classes.linkText}
+          activeClassName={classes.isActive}
+        >
           <ListItem button>
             <ListItemText primary={title} />
           </ListItem>

@@ -7,7 +7,8 @@ import ProductDisplay from "../../components/product-display"
 
 const RoyalJellyPage = () => {
   const title = products[2].title
-  const price = products[2].price
+  const wholesalePrice = products[2].wholesalePrice
+  const resellerPrice = products[2].resellerPrice
   const description = products[2].description
   const previousProduct = products[2].previousProduct
   const nextProduct = products[2].nextProduct
@@ -30,7 +31,8 @@ const RoyalJellyPage = () => {
         <ProductDisplay
           imageData={RoyalJelly.placeholderImage.childImageSharp.fluid}
           title={title}
-          price={price}
+          wholesalePrice={wholesalePrice}
+          resellerPrice={resellerPrice}
           description={description}
           previousProduct={previousProduct}
           nextProduct={nextProduct}

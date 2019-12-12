@@ -24,7 +24,8 @@ const useStyles = makeStyles(theme => ({
 const ProductDisplay = ({
   imageData,
   title,
-  price,
+  wholesalePrice,
+  resellerPrice,
   description,
   previousProduct,
   nextProduct,
@@ -44,24 +45,11 @@ const ProductDisplay = ({
       </Typography>
 
       <Typography variant="h6" component="p" align="center" gutterBottom>
-        {price}
+        {wholesalePrice}
       </Typography>
-
-      <Grid container justify="center" className={classes.headingTopMargin}>
-        <Grid item xs={11} md={5}>
-          <Paper>
-            <Img fluid={imageData} />
-          </Paper>
-        </Grid>
-      </Grid>
-
-      <Grid container justify="center" className={classes.headingTopMargin}>
-        <Grid item xs={11} md={4}>
-          <Typography variant="body1" component="p" gutterBottom>
-            {description}
-          </Typography>
-        </Grid>
-      </Grid>
+      <Typography variant="h6" component="p" align="center" gutterBottom>
+        {resellerPrice}
+      </Typography>
 
       <Grid container justify="center" className={classes.headingTopMargin}>
         <Grid
@@ -82,6 +70,22 @@ const ProductDisplay = ({
               Next
             </Link>
           </Button>
+        </Grid>
+      </Grid>
+
+      <Grid container justify="center" className={classes.headingTopMargin}>
+        <Grid item xs={11} md={5}>
+          <Paper>
+            <Img fluid={imageData} />
+          </Paper>
+        </Grid>
+      </Grid>
+
+      <Grid container justify="center" className={classes.headingTopMargin}>
+        <Grid item xs={11} md={4}>
+          <Typography variant="body1" component="p" gutterBottom>
+            {description}
+          </Typography>
         </Grid>
       </Grid>
     </div>
