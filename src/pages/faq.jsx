@@ -11,6 +11,7 @@ import {
 import { ExpandMore } from "@material-ui/icons/"
 
 import { questionAnswers } from "../question-answer"
+import Footer from "../components/footer"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -53,6 +54,7 @@ const FaqPage = () => {
           ))}
         </Grid>
       </Grid>
+      <Footer />
     </Layout>
   )
 }

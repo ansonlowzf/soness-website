@@ -118,8 +118,8 @@ const TopNavigation = () => {
         <Container maxWidth="lg">
           <Toolbar style={{ justifyContent: `space-between` }}>
             <Link to="/" className={classes.linkText}>
-              <Typography variant="h6" className={classes.title}>
-                Son &amp; Ness Enterprise
+              <Typography variant="h6" component="h2" className={classes.title}>
+                Soness
               </Typography>
             </Link>
 

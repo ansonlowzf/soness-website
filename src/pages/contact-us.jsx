@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import { makeStyles } from "@material-ui/core/styles"
 
 import { Avatar, Grid, Typography } from "@material-ui/core"
+import Footer from "../components/footer"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -82,6 +83,7 @@ const ContactPage = () => {
           </Typography>
         </Grid>
       </div>
+      <Footer />
     </Layout>
   )
 }

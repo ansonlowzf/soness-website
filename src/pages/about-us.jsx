@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import { makeStyles } from "@material-ui/core/styles"
 import { Button, Grid, Typography } from "@material-ui/core"
+import Footer from "../components/footer"
 
 const useStyles = makeStyles({
   headingTopMargin: {
@@ -147,12 +148,15 @@ const AboutUs = () => {
             </Typography>
             <Button
               variant="contained"
-              color="primary"
+              color="secondary"
               className={classes.headingTopMargin}
             >
               <Link
                 to="/contact-us"
-                style={{ textDecoration: `none`, color: `black` }}
+                style={{
+                  textDecoration: `none`,
+                  color: `black`,
+                }}
               >
                 Contact Us
               </Link>
@@ -160,6 +164,7 @@ const AboutUs = () => {
           </Grid>
         </Grid>
       </Grid>
+      <Footer />
     </Layout>
   )
 }
