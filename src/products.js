@@ -28,6 +28,7 @@ export const products = [
     nextProduct: `/product/mixed-flower-honey`,
     previousProduct: `/product/mixed-flower-honey`,
     wholesalePrice: `Wholesale: RM 200 / 0.25 kg / Bottle`,
+    resellerPrice: `RM 58 / 0.7 kg /  Bottle`,
     description: `Gift from the nature & the bee, this foods keep the bee queen live long. Normal, bee can live for 65 days, but the queen is living for 2 years. It's also fragile without the maintenance of the bee, the why we must keep in freezer`,
   },
 ]

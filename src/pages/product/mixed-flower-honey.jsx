@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { products } from "../../products"
 
 import ProductDisplay from "../../components/product-display"
+import Footer from "../../components/footer"
 
 const MixedFlowerHoneyPage = () => {
   const title = products[0].title
@@ -15,9 +16,9 @@ const MixedFlowerHoneyPage = () => {
 
   const MixedFlowerHoney = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "honey-in-bottle.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "mixed-flower-honey.JPG" }) {
         childImageSharp {
-          fluid(maxWidth: 1366, maxHeight: 768) {
+          fluid(maxWidth: 1260, maxHeight: 900) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -37,6 +38,7 @@ const MixedFlowerHoneyPage = () => {
           previousProduct={previousProduct}
           nextProduct={nextProduct}
         />
+        <Footer />
       </Layout>
     </>
   )
