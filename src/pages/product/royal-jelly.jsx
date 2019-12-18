@@ -16,7 +16,7 @@ const RoyalJellyPage = () => {
 
   const RoyalJelly = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "royal-jelly.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "soness-royal-jelly.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
