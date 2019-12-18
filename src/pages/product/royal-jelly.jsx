@@ -18,7 +18,7 @@ const RoyalJellyPage = () => {
     query {
       placeholderImage: file(relativePath: { eq: "royal-jelly.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1260, maxHeight: 900) {
+          fluid {
             ...GatsbyImageSharpFluid
           }
         }

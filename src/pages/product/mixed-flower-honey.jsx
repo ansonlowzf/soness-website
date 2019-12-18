@@ -18,7 +18,7 @@ const MixedFlowerHoneyPage = () => {
     query {
       placeholderImage: file(relativePath: { eq: "mixed-flower-honey.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1260, maxHeight: 900) {
+          fluid {
             ...GatsbyImageSharpFluid
           }
         }
