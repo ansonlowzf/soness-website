@@ -16,7 +16,7 @@ const MixedFlowerHoneyPage = () => {
 
   const MixedFlowerHoney = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "mixed-flower-honey.JPG" }) {
+      placeholderImage: file(relativePath: { eq: "mixed-flower-honey.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1260, maxHeight: 900) {
             ...GatsbyImageSharpFluid
