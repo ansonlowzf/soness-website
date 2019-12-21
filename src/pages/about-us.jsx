@@ -38,7 +38,7 @@ const AboutUs = () => {
             gutterBottom
             className={classes.headingTopMargin}
           >
-            What We Do?
+            What Do We Do?
           </Typography>
 
           <Typography variant="body1" component="p" gutterBottom>
@@ -56,7 +56,7 @@ const AboutUs = () => {
 
           <Typography variant="body1" component="p" gutterBottom>
             We travel several states, from Seremban, Melaka, Johor &amp; Bukit
-            Mertajam to purchase honey direct from bee farmer.
+            Mertajam to purchase honey directly from bee farmer.
           </Typography>
 
           <Typography
@@ -69,9 +69,7 @@ const AboutUs = () => {
           </Typography>
 
           <Typography variant="body1" component="p" gutterBottom>
-            {`Bee farmer sell us 70kg per container, real raw honey from bee farm
-            which need to be filtered. Then, we pack in 10kg bottle and
-            wholesale in Kuala Lumpur. You get raw honey for real, welcome you send to the lab testing`}
+            {`Bee farmer sell in a bundle. Then, we filter and pack in 10kg bottle and wholesale in Kuala Lumpur. You get raw honey for real, welcome you send to the lab testing`}
           </Typography>
 
           <Typography
@@ -84,7 +82,7 @@ const AboutUs = () => {
           </Typography>
 
           <Typography variant="body1" component="p" gutterBottom>
-            {`Firstly, we need to earn money to survive. Apart from this, we also gain satisfaction from doing healthcare business. Most importantly, government officer used to say "It's hard to buy raw honey from the market". Well, we make it available in KL`}
+            {`For sure, we need to earn money. Apart from that, we also gain satisfaction from doing the healthcare business. Most importantly, government officer used to say "It's hard to buy raw honey from the market". Well, we make it available in KL`}
           </Typography>
 
           <Typography
@@ -99,7 +97,8 @@ const AboutUs = () => {
           <Typography variant="body1" component="p" gutterBottom>
             <ol>
               <li>Regular honey drinker for healthcare purpose</li>
-              <li>Fabricator</li>
+              <li>Honey fabricator</li>
+              <li>Build their honey brand and business</li>
             </ol>
           </Typography>
 
@@ -114,10 +113,10 @@ const AboutUs = () => {
 
           <Typography variant="body1" component="p" gutterBottom>
             <ul>
-              <li>First time, you drink honey - you feel nothing. </li>
+              <li>The first time, you drink honey - you feel nothing. </li>
               <li>
-                You drink for one month - you feel like you not get tired
-                easily.
+                You drink for one month - you feel like you not easy to get
+                tired.
               </li>
               <li>
                 You drink for 1 year; people around you feel like you are
@@ -156,6 +155,8 @@ const AboutUs = () => {
                 style={{
                   textDecoration: `none`,
                   color: `black`,
+                  fontWeight: `bolder`,
+                  padding: `0.5em 1em`,
                 }}
               >
                 Contact Us
