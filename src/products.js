@@ -7,9 +7,7 @@ export const products = [
     previousProduct: `/product/royal-jelly`,
     wholesalePrice: `Wholesale: RM 580 / 10 kg / Container`,
     resellerPrice: `Reseller: RM 58 / 0.7 kg /  Bottle`,
-    description: `Most fragrant honey in our list, countless flower surround the beehive.
- Multiple flower fragrant smell and taste sweet only. Honey is filtered
- and pack in food grade bottles`,
+    description: `Most famous honey on our list. Flower source highly depends on bees. Each batch has a different smell and taste. The honey colour is slightly different each time`,
   },
   {
     title: `Durian Flower Honey`,
@@ -29,6 +27,6 @@ export const products = [
     previousProduct: `/product/mixed-flower-honey`,
     wholesalePrice: `Wholesale: RM 200 / 0.25 kg / Bottle`,
     resellerPrice: `RM 58 / 0.7 kg /  Bottle`,
-    description: `Gift from the nature & the bee, this foods keep the bee queen live long. Normal, bee can live for 65 days, but the queen is living for 2 years. It's also fragile without the maintenance of the bee, the why we must keep in freezer`,
+    description: `Most natural healthcare gift from the mother earth & the bees. Do you know working bee live around 90days? What about the queen which eats royal jelly as food? She can live for 1460 days.`,
   },
 ]

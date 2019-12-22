@@ -42,9 +42,9 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const NavLinks = [
-  { title: `HOME`, path: `/` },
   { title: `ABOUT US`, path: `/about-us` },
   { title: `PRODUCT`, path: `/product/mixed-flower-honey` },
+  { title: `RECIPE`, path: `/recipe` },
   { title: `CONTACT US`, path: `/contact-us` },
   { title: `FAQ`, path: `/faq` },
 ]

@@ -11,6 +11,9 @@ const useStyles = makeStyles(theme => ({
   headingTopMargin: {
     marginTop: `1em`,
   },
+  textTopMargin: {
+    marginTop: `2.5em`,
+  },
   sectionMargin: {
     marginTop: `2em`,
     marginBottom: `2em`,
@@ -18,6 +21,9 @@ const useStyles = makeStyles(theme => ({
   linkText: {
     textDecoration: `none`,
     color: theme.palette.common.black,
+  },
+  isActive: {
+    color: theme.palette.secondary.main,
   },
 }))
 
@@ -81,7 +87,7 @@ const ProductDisplay = ({
         </Grid>
       </Grid>
 
-      <Grid container justify="center" className={classes.headingTopMargin}>
+      <Grid container justify="center" className={classes.textTopMargin}>
         <Grid item xs={11} md={4}>
           <Typography variant="body1" component="p" gutterBottom>
             {description}
