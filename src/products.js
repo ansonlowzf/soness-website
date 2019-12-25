@@ -7,7 +7,7 @@ export const products = [
     previousProduct: `/product/royal-jelly`,
     wholesalePrice: `Wholesale: RM 580 / 10kg`,
     resellerPrice: `Reseller: RM 58 / 0.7kg`,
-    description: `Most famous honey on our list. Flower source depends on bees. Although, each batch has a different smell and taste (bees are harvest different mixture of flowers). The original flower smell and the taste are still the most fragrant. The honey colour is slightly different each time`,
+    description: `Most famous honey on our list. The mixture of the flower depends on bees. Each batch has difference smell and taste: bees are harvest flowers by its instinct). The honey colour is slightly different for each batch.`,
   },
   {
     title: `Durian Flower Honey`,

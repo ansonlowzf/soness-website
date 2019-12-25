@@ -82,7 +82,7 @@ const ContactPage = () => {
           </Typography>
 
           <Typography variant="p" component="p" gutterBottom>
-            Please WhasApp in case I not picking up phone (Prefers WhatsApp)
+            Please WhasApp in case I not picking up phone
           </Typography>
 
           <Email fontSize="large" className={classes.headingTopMargin} />
