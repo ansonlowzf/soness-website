@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { makeStyles } from "@material-ui/core/styles"
+import { WhatsApp, Email } from "@material-ui/icons"
 
 import { Avatar, Grid, Typography } from "@material-ui/core"
 import Footer from "../components/footer"
@@ -70,15 +71,27 @@ const ContactPage = () => {
             Aness Chee
           </Typography>
 
+          <WhatsApp fontSize="large" className={classes.headingTopMargin} />
           <Typography
             variant="h6"
             component="p"
             gutterBottom
-            className={classes.headingTopMargin}
+            style={{ marginTop: `0.5em` }}
           >
-            Phone: 018-787 4184
+            018-787 4184
           </Typography>
-          <Typography variant="h6" component="p" gutterBottom>
+
+          <Typography variant="p" component="p" gutterBottom>
+            Please WhasApp in case I not picking up phone (Prefers WhatsApp)
+          </Typography>
+
+          <Email fontSize="large" className={classes.headingTopMargin} />
+          <Typography
+            variant="h6"
+            component="p"
+            gutterBottom
+            style={{ marginTop: `0.5em` }}
+          >
             geminicmy@gmail.com
           </Typography>
         </Grid>

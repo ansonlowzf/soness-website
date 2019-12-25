@@ -145,23 +145,28 @@ const AboutUs = () => {
             >
               Start Your Honey Business With Us
             </Typography>
-            <Button
-              variant="contained"
-              color="secondary"
-              className={classes.headingTopMargin}
+            <Link
+              to="/contact-us"
+              style={{
+                textDecoration: `none`,
+                color: `black`,
+                fontWeight: `bolder`,
+                padding: `0.5em 1em`,
+              }}
             >
-              <Link
-                to="/contact-us"
+              <Button
+                variant="contained"
+                color="primary"
+                className={classes.headingTopMargin}
                 style={{
-                  textDecoration: `none`,
-                  color: `black`,
-                  fontWeight: `bolder`,
-                  padding: `0.5em 1em`,
+                  padding: `0.75em 1.5em`,
+                  fontWeight: `bold`,
+                  letterSpacing: `1.5px`,
                 }}
               >
                 Contact Us
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </Grid>
         </Grid>
       </Grid>

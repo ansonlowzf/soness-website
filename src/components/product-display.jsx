@@ -60,12 +60,12 @@ const ProductDisplay = ({
       <Grid container justify="center" className={classes.headingTopMargin}>
         <Grid container item justify="space-between" xs={11} md={5}>
           <Link to={previousProduct} className={classes.linkText}>
-            <Button variant="contained" color="secondary">
+            <Button variant="contained" color="primary">
               Previous
             </Button>
           </Link>
           <Link to={nextProduct} className={classes.linkText}>
-            <Button variant="contained" color="secondary">
+            <Button variant="contained" color="primary">
               Next
             </Button>
           </Link>

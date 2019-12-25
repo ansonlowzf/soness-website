@@ -70,7 +70,11 @@ const IndexPage = () => {
                   aria-label="product page"
                   color="secondary"
                   size="large"
-                  style={{ padding: `0.75em 1.5em`, fontWeight: `bold` }}
+                  style={{
+                    padding: `0.75em 1.5em`,
+                    fontWeight: `bold`,
+                    letterSpacing: `1.5px`,
+                  }}
                 >
                   Product &rarr;
                 </Button>
