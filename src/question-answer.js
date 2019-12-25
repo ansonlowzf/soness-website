@@ -40,4 +40,8 @@ export const questionAnswers = [
     question: `Does your company sell other raw honey?`,
     answer: `Yes, for pre-order only (deposit is required). We have durian flower, osmanthus flower, & pineapple flower`,
   },
+  {
+    question: `Could I buy a bottle of honey as a tester?`,
+    answer: `Yes, we have 120g tester available.`,
+  },
 ]
