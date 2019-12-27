@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
+import SEO from "../components/seo"
 import { makeStyles } from "@material-ui/core/styles"
 import {
   ExpansionPanel,
@@ -32,6 +33,7 @@ const FaqPage = () => {
 
   return (
     <Layout>
+      <SEO title="FAQ" />
       <Grid container justify="center">
         <Grid item xs={11} md={5}>
           <Typography

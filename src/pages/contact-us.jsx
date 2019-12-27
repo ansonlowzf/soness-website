@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
+import SEO from "../components/seo"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { makeStyles } from "@material-ui/core/styles"
@@ -46,6 +47,7 @@ const ContactPage = () => {
 
   return (
     <Layout>
+      <SEO title="Contact Us" />
       <div className={classes.root}>
         <Grid container direction="column" alignItems="center">
           <Typography

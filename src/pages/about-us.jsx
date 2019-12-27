@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/Layout"
+import SEO from "../components/seo"
 import { makeStyles } from "@material-ui/core/styles"
 import { Button, Grid, Typography } from "@material-ui/core"
 import Footer from "../components/footer"
@@ -20,6 +21,7 @@ const AboutUs = () => {
 
   return (
     <Layout>
+      <SEO title="About Us" />
       <Typography
         variant="h2"
         component="h1"
