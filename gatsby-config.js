@@ -3,6 +3,7 @@ module.exports = {
     title: `Son & Ness Enterprise`,
     description: `Wholesale Raw honey direct from bee farm in Malaysia. Resellers are welcome`,
     author: `@Anson Low Z.F`,
+    siteUrl: `https://www.soness.com.my`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -36,6 +37,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
