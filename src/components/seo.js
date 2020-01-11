@@ -29,6 +29,10 @@ function SEO({ description, lang, meta, title }) {
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
+          name: `google-site-verification`,
+          content: `aO0R5LONGr7XnpvyjKtgqshSaGCqi1dkXaqbgSq5YaM`,
+        },
+        {
           name: `description`,
           content: metaDescription,
         },
@@ -64,7 +68,6 @@ function SEO({ description, lang, meta, title }) {
     />
   )
 }
-
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
