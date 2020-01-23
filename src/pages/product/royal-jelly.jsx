@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../../components/Layout"
+import SEO from "../../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
 import { products } from "../../products"
 
@@ -27,20 +28,19 @@ const RoyalJellyPage = () => {
   `)
 
   return (
-    <>
-      <Layout>
-        <ProductDisplay
-          imageData={RoyalJelly.placeholderImage.childImageSharp.fluid}
-          title={title}
-          wholesalePrice={wholesalePrice}
-          resellerPrice={resellerPrice}
-          description={description}
-          previousProduct={previousProduct}
-          nextProduct={nextProduct}
-        />
-        <Footer />
-      </Layout>
-    </>
+    <Layout>
+      <SEO title="Royal Jelly" />
+      <ProductDisplay
+        imageData={RoyalJelly.placeholderImage.childImageSharp.fluid}
+        title={title}
+        wholesalePrice={wholesalePrice}
+        resellerPrice={resellerPrice}
+        description={description}
+        previousProduct={previousProduct}
+        nextProduct={nextProduct}
+      />
+      <Footer />
+    </Layout>
   )
 }
 

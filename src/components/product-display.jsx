@@ -58,24 +58,17 @@ const ProductDisplay = ({
       </Typography>
 
       <Grid container justify="center" className={classes.headingTopMargin}>
-        <Grid
-          container
-          item
-          justify="space-between"
-          xs={11}
-          md={5}
-          className={classes.sectionMargin}
-        >
-          <Button variant="contained" color="primary">
-            <Link to={previousProduct} className={classes.linkText}>
+        <Grid container item justify="space-between" xs={11} md={5}>
+          <Link to={previousProduct} className={classes.linkText}>
+            <Button variant="contained" color="primary">
               Previous
-            </Link>
-          </Button>
-          <Button variant="contained" color="primary">
-            <Link to={nextProduct} className={classes.linkText}>
+            </Button>
+          </Link>
+          <Link to={nextProduct} className={classes.linkText}>
+            <Button variant="contained" color="primary">
               Next
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </Grid>
       </Grid>
 

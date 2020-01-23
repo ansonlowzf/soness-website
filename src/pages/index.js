@@ -27,58 +27,61 @@ const IndexPage = () => {
   `)
 
   return (
-    <>
-      <SEO title="Homepage" />
-      <Layout>
-        <ImageBackground
-          Tag="section"
-          fluid={data.placeholderImage.childImageSharp.fluid}
+    <Layout>
+      <SEO title="Home" />
+      <ImageBackground
+        Tag="section"
+        fluid={data.placeholderImage.childImageSharp.fluid}
+      >
+        <Grid
+          style={{
+            width: `100%`,
+            height: `100%`,
+            backgroundColor: `rgba(0, 0, 0, 0.5)`,
+          }}
+          container
+          justify="center"
+          alignItems="center"
         >
-          <Grid
-            style={{
-              width: `100%`,
-              height: `100%`,
-              backgroundColor: `rgba(0, 0, 0, 0.5)`,
-            }}
-            container
-            justify="center"
-            alignItems="center"
-          >
-            <Grid item style={{ padding: `1em` }}>
-              <Typography
-                variant="h2"
-                component="h1"
-                gutterBottom
-                style={{ color: `white` }}
+          <Grid item style={{ padding: `1em` }}>
+            <Typography
+              variant="h2"
+              component="h1"
+              gutterBottom
+              style={{ color: `white` }}
+            >
+              Son &amp; Ness Enterprise
+            </Typography>
+            <Typography
+              variant="h4"
+              component="p"
+              gutterBottom
+              style={{ color: `white`, marginBottom: `1em` }}
+            >
+              Wholesales Raw Honey in Kuala Lumpur
+            </Typography>
+            <Link
+              to="/product/mixed-flower-honey"
+              style={{ textDecoration: `none` }}
+            >
+              <Button
+                variant="contained"
+                aria-label="product page"
+                color="secondary"
+                size="large"
+                style={{
+                  padding: `0.75em 1.5em`,
+                  fontWeight: `bold`,
+                  letterSpacing: `1.5px`,
+                }}
               >
-                Son &amp; Ness Enterprise
-              </Typography>
-              <Typography
-                variant="h4"
-                component="p"
-                gutterBottom
-                style={{ color: `white`, marginBottom: `1em` }}
-              >
-                Wholesales Raw Honey in Kuala Lumpur
-              </Typography>
-              <Link
-                to="/product/mixed-flower-honey"
-                style={{ textDecoration: `none` }}
-              >
-                <Button
-                  variant="contained"
-                  aria-label="product page"
-                  color="secondary"
-                  size="large"
-                >
-                  Discover &rarr;
-                </Button>
-              </Link>
-            </Grid>
+                Product &rarr;
+              </Button>
+            </Link>
           </Grid>
-        </ImageBackground>
-      </Layout>
-    </>
+        </Grid>
+      </ImageBackground>
+    </Layout>
   )
 }
 
