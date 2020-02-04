@@ -44,7 +44,7 @@ const MixedFlowerHoneyPage = () => {
         <Grid item xs={11} md={4}>
           <Divider style={{ margin: `1em 0` }} />
           <Typography component="h2" variant="h5">
-            Important! Do you know how to handle raw honey?
+            {`Important! Raw honey VS Pure Honey?`}
           </Typography>
           <Typography
             component="p"
@@ -52,16 +52,16 @@ const MixedFlowerHoneyPage = () => {
             color="error"
             gutterBottom
           >
-            Must read !
+            {`Must read!`}
           </Typography>
           <Typography component="p" variant="body1" gutterBottom>
-            Raw honey is not pure honey !
+            {` Raw honey is not equivalent to pure honey!`}
           </Typography>
           <Typography component="p" variant="body1" gutterBottom>
-            Raw honey is not pure honey !
+            {`Raw honey is not equivalent to pure honey!`}
           </Typography>
           <Typography component="p" variant="body1" gutterBottom>
-            Raw honey is not pure honey !
+            {`Raw honey is not equivalent to pure honey!`}
           </Typography>
           <Typography component="p" variant="body1" gutterBottom>
             {`It's so important that we must repeat it three times`}
@@ -84,13 +84,13 @@ const MixedFlowerHoneyPage = () => {
             color="error"
             gutterBottom
           >
-            The below content is extremely important !
+            {`The below content is extremely important!`}
           </Typography>
           <Typography component="p" variant="body1" gutterBottom>
             {`Live yeast benefits adult's digest system but NOT for children under 2 years old who not yet develop a complete digest system. It may cause infant botulism. It's a form of food poisoning which is dangerous to children`}
           </Typography>
           <Typography component="h2" variant="h5" gutterBottom>
-            Conclusion
+            {`Conclusion`}
           </Typography>
           <Typography component="p" variant="body1" gutterBottom>
             {`1. Do not store raw honey at the place which exposes to sunlight`}
