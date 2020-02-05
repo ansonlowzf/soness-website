@@ -1,9 +1,8 @@
+import { Container, Grid, Typography } from "@material-ui/core"
 import React from "react"
+import Footer from "../components/footer"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import Footer from "../components/footer"
-
-import { Container, Grid, Typography } from "@material-ui/core"
 
 const RecipePage = () => {
   return (
@@ -14,19 +13,12 @@ const RecipePage = () => {
           <Typography
             align="center"
             component="h1"
-            variant="h3"
+            variant="h2"
             gutterBottom
             style={{ marginTop: `1.5em` }}
           >
-            Honey Product Recipe
+            Honey Recipe
           </Typography>
-
-          {/* <Typography align="center" component="p" variant="body1" gutterBottom>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus
-            ipsa ab dolores! Dolor aut eligendi doloribus non, nemo expedita
-            libero veritatis quia maiores ducimus incidunt mollitia, nobis
-            quaerat hic sed.
-          </Typography> */}
 
           <Typography component="h2" variant="h4" gutterBottom color="primary">
             Vinegar Wolfberry Honey
@@ -53,7 +45,7 @@ const RecipePage = () => {
           </Typography>
           <Typography component="p" variant="body1" gutterBottom>
             <ol>
-              <li>Dried wolfberry 500g</li>
+              <li>{`Dried wolfberry 500g`}</li>
               <li>{`Vinegar 300ml (Choose your favourite vinegar)`}</li>
               <li>{`Raw honey 120g (Choose your favourite, we recommend mixed flower honey)`}</li>
             </ol>
@@ -75,27 +67,27 @@ const RecipePage = () => {
               <li>{`Enjoy your vinegar wolfberry honey or resales after 24 hours`}</li>
             </ol>
             <Typography component="p" variant="body1" gutterBottom>
-              The wolfberry drying process is very important
+              {`The wolfberry drying process is very important`}
             </Typography>
             <Typography component="p" variant="body1" gutterBottom>
-              The wolfberry drying process is very important
+              {`The wolfberry drying process is very important`}
             </Typography>
             <Typography component="p" variant="body1" gutterBottom>
-              The wolfberry drying process is very important
+              {`The wolfberry drying process is very important`}
             </Typography>
           </Typography>
           <Typography component="p" variant="body1" gutterBottom>
-            Important thing must repeat 3 times, extra water in wolfberry might
-            increase the moisture level of the honey and cause fermentation
+            {`Important thing must repeat 3 times, extra water in wolfberry might
+            increase the moisture level of the honey and cause fermentation`}
           </Typography>
           <Typography component="p" variant="body1" gutterBottom>
-            Fully absorbed the vinegar will expand, and become soft,
+            {`Fully absorbed the vinegar will expand, and become soft`}
           </Typography>
           <Typography component="p" variant="body1" gutterBottom>
-            Do not surprise to see the wolfberry become big
+            {`Do not surprise to see the wolfberry become big`}
           </Typography>
           <Typography component="p" variant="body1" gutterBottom>
-            Elder people can eat it easily
+            {` Elder people can eat it easily`}
           </Typography>
         </Grid>
       </Container>

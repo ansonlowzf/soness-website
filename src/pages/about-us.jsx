@@ -1,11 +1,11 @@
-import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { Button, Container, Grid, Typography } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core/styles"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import React from "react"
+import Footer from "../components/footer"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import { makeStyles } from "@material-ui/core/styles"
-import { Button, Container, Grid, Typography } from "@material-ui/core"
-import Footer from "../components/footer"
 
 const useStyles = makeStyles({
   headingTopMargin: {
@@ -57,7 +57,7 @@ const AboutUs = () => {
           gutterBottom
           className={classes.headingTopMargin}
         >
-          About Us
+          {`About Us`}
         </Typography>
 
         <Grid container direction="column" alignItems="center">
@@ -71,7 +71,7 @@ const AboutUs = () => {
               What Do We Do?
             </Typography>
             <Typography variant="body1" component="p" gutterBottom>
-              Wholesale &amp; supply raw honey to reseller in Kuala Lumpur
+              {`Wholesale &amp; supply raw honey to resellers in Kuala Lumpur`}
             </Typography>
           </Grid>
 
@@ -93,12 +93,11 @@ const AboutUs = () => {
               gutterBottom
               className={classes.headingTopMargin}
             >
-              How we get raw honey?
+              {`How Do We Get Raw Honey?`}
             </Typography>
-
             <Typography variant="body1" component="p" gutterBottom>
-              We travel several states, from Seremban, Melaka, Johor &amp; Bukit
-              Mertajam to purchase honey directly from bee farmer.
+              {`We travel several states, from Seremban, Melaka, Johor &amp; Bukit
+              Mertajam to purchase raw honey directly from beekeepers.`}
             </Typography>
           </Grid>
 
@@ -109,11 +108,10 @@ const AboutUs = () => {
               gutterBottom
               className={classes.headingTopMargin}
             >
-              How we wholesale raw honey?
+              {`How Do We Wholesale The Honey?`}
             </Typography>
-
             <Typography variant="body1" component="p" gutterBottom>
-              {`Bee farmer sell in a bundle. We filter and pack in 10kg food grade bottle and wholesale in Kuala Lumpur. You get raw honey for real, welcome you send to the lab testing`}
+              {`Bee farmer sell in a bundle. Then, We filtered and packed in 10kg food grade's bottle and wholesale in Kuala Lumpur. You get real raw honey, welcome you send to lab test.`}
             </Typography>
           </Grid>
 
@@ -139,7 +137,7 @@ const AboutUs = () => {
             </Typography>
 
             <Typography variant="body1" component="p" gutterBottom>
-              {`To earn money. Apart from that, we also gain satisfaction from doing the healthcare business. Most importantly, government officer used to say "It's hard to buy raw honey from the market". Well, you could get raw honey in KL now`}
+              {`Of course, we need to earn money for living. Apart from that, we also gain satisfaction from doing the healthcare business. Most importantly, government officer and newspaper also reported: "It's hard to get real raw honey from the market". Raw honey is easier accessible and available in KL now.`}
             </Typography>
           </Grid>
 
@@ -161,14 +159,18 @@ const AboutUs = () => {
               gutterBottom
               className={classes.headingTopMargin}
             >
-              Who buy from us
+              {`Who buy from us`}
             </Typography>
-
             <Typography variant="body1" component="p" gutterBottom>
               <ol>
-                <li>Regular honey drinker for healthcare purpose</li>
-                <li>Honey fabricator</li>
+                <li>Regular honey drinkers who need a bigger quantity</li>
+                <li>Honey fabricator who makes honey healthcare product</li>
+                <li>
+                  Companies which want to deliver healthcare gifts to their
+                  customers
+                </li>
                 <li>Build their honey brand and business</li>
+                <li>Beauty salon which uses honey for facial program</li>
               </ol>
             </Typography>
           </Grid>
@@ -183,7 +185,6 @@ const AboutUs = () => {
               <Img fluid={data.placeholderImage3.childImageSharp.fluid} />
             </Grid>
           </Grid>
-
           <Grid container item xs={10} md={5}>
             <Typography
               variant="h4"
@@ -191,7 +192,7 @@ const AboutUs = () => {
               gutterBottom
               className={classes.headingTopMargin}
             >
-              Conclusion
+              {`Conclusion`}
             </Typography>
 
             <Typography variant="body1" component="p" gutterBottom>
@@ -231,7 +232,7 @@ const AboutUs = () => {
               gutterBottom
               className={classes.headingTopMargin}
             >
-              Start Your Honey Business With Us
+              {`Start Your Honey Business Journey With Us`}
             </Typography>
             <Link
               to="/contact-us"
