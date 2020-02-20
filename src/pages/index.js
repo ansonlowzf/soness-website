@@ -3,9 +3,12 @@ import styled from "styled-components"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import SEO from "../components/seo"
+import SonessButton from "../components/sonessButton"
 
 import Layout from "../components/Layout"
 import { Button, Grid, Typography } from "@material-ui/core"
+import Heading2 from "../components/heading2"
+import { makeStyles } from "@material-ui/core/styles"
 
 const ImageBackground = styled(BackgroundImage)`
   background-position: center center;
@@ -13,7 +16,12 @@ const ImageBackground = styled(BackgroundImage)`
   height: calc(100vh - 64px);
 `
 
+const useStyles = makeStyles({
+  sectionMarginBottom: `10em`,
+})
+
 const IndexPage = () => {
+  const classes = useStyles()
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "honey-in-bottle.jpg" }) {
@@ -32,6 +40,7 @@ const IndexPage = () => {
       <ImageBackground
         Tag="section"
         fluid={data.placeholderImage.childImageSharp.fluid}
+        style={{ marginBottom: `10em` }}
       >
         <Grid
           style={{
@@ -43,30 +52,27 @@ const IndexPage = () => {
           justify="center"
           alignItems="center"
         >
-          <Grid item style={{ padding: `1em` }}>
+          <Grid item xs={11} md={5} style={{ padding: `1em` }}>
             <Typography
               variant="h2"
               component="h1"
               gutterBottom
               style={{ color: `white` }}
             >
-              Son &amp; Ness Enterprise
+              {`Raw Honey`}
             </Typography>
             <Typography
               variant="h4"
               component="p"
-              gutterBottom
+              paragraph
               style={{ color: `white`, marginBottom: `1em` }}
             >
-              Wholesales Raw Honey in Kuala Lumpur
+              Direct from Bee Farm and Wholesales in Kuala Lumpur
             </Typography>
-            <Link
-              to="/product/mixed-flower-honey"
-              style={{ textDecoration: `none` }}
-            >
+            <a href="#about" style={{ textDecoration: `none` }}>
               <Button
                 variant="contained"
-                aria-label="product page"
+                aria-label="about us"
                 color="secondary"
                 size="large"
                 style={{
@@ -75,12 +81,32 @@ const IndexPage = () => {
                   letterSpacing: `1.5px`,
                 }}
               >
-                Product &rarr;
+                Explore &rarr;
               </Button>
-            </Link>
+            </a>
           </Grid>
         </Grid>
       </ImageBackground>
+
+      <Heading2 title="ABOUT US" idPath="about" />
+      <Grid
+        container
+        direction="column"
+        alignItems="center"
+        className={classes.sectionMarginBottom}
+      >
+        <Grid item xs={11}>
+          <Typography variant="h4" component="h3" align="center" gutterBottom>
+            {`Son & Ness Enterprise`}
+          </Typography>
+        </Grid>
+        <Grid item xs={11} md={4}>
+          <Typography variant="body1" component="p" align="center" paragraph>
+            {`We make raw honey easier to get in Kuala Lumpur`}
+          </Typography>
+        </Grid>
+        <SonessButton linkUrl={`/about-us`} buttonText={`Know More`} />
+      </Grid>
     </Layout>
   )
 }
