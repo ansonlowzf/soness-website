@@ -1,14 +1,13 @@
+import { Button, Grid, Typography } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core/styles"
+import { graphql, useStaticQuery } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 import React from "react"
 import styled from "styled-components"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
+import Heading2 from "../components/heading2"
+import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import SonessButton from "../components/sonessButton"
-
-import Layout from "../components/Layout"
-import { Button, Grid, Typography } from "@material-ui/core"
-import Heading2 from "../components/heading2"
-import { makeStyles } from "@material-ui/core/styles"
 
 const ImageBackground = styled(BackgroundImage)`
   background-position: center center;
@@ -59,7 +58,7 @@ const IndexPage = () => {
               gutterBottom
               style={{ color: `white` }}
             >
-              {`Raw Honey`}
+              {`Start Your Honey Business Today`}
             </Typography>
             <Typography
               variant="h4"
@@ -67,7 +66,7 @@ const IndexPage = () => {
               paragraph
               style={{ color: `white`, marginBottom: `1em` }}
             >
-              Direct from Bee Farm and Wholesales in Kuala Lumpur
+              {`Genuine Raw Honey Direct from Bee Farm`}
             </Typography>
             <a href="#about" style={{ textDecoration: `none` }}>
               <Button
@@ -102,10 +101,26 @@ const IndexPage = () => {
         </Grid>
         <Grid item xs={11} md={4}>
           <Typography variant="body1" component="p" align="center" paragraph>
-            {`We make raw honey easier to get in Kuala Lumpur`}
+            {`We wholesales raw honey from 10 kg onwards, start your honey business with low commitment`}
           </Typography>
         </Grid>
         <SonessButton linkUrl={`/about-us`} buttonText={`Know More`} />
+      </Grid>
+
+      <Heading2 title="Product" />
+      <Grid container justify="center" spacing={5}>
+        <Grid item xs={12} md={5}>
+          <Typography component="h3" variant="h6" align="center">
+            Product 1
+          </Typography>
+          <SonessButton buttonText="Check Out" />
+        </Grid>
+        <Grid item xs={12} md={5}>
+          <Typography component="h3" variant="h6" align="center">
+            Product 1
+          </Typography>
+          <SonessButton buttonText="Check Out" />
+        </Grid>
       </Grid>
     </Layout>
   )
