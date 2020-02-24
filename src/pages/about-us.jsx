@@ -100,8 +100,8 @@ const AboutUs = () => {
           <iframe
             className={classes.headingTopMargin}
             title="visiting bee farm in Johor"
-            width="370"
-            height="250"
+            width="560"
+            height="300"
             src="https://www.youtube.com/embed/lwPCWqd58WE"
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -137,16 +137,6 @@ const AboutUs = () => {
           </Grid>
         </Grid>
 
-        <Typography
-          variant="h4"
-          component="h2"
-          align="center"
-          gutterBottom
-          className={classes.headingTopMargin}
-        >
-          Conclusion
-        </Typography>
-
         <Typography variant="body1" component="p" paragraph>
           <ul>
             <li>The first time, you drink honey - you feel nothing. </li>
@@ -164,7 +154,7 @@ const AboutUs = () => {
           </ul>
         </Typography>
         <Typography variant="h6" component="p" align="center">
-          {`It's great opportunity to start natural healthcare business`}
+          {`It's a great opportunity to start natural healthcare business`}
         </Typography>
 
         <Typography
@@ -179,7 +169,6 @@ const AboutUs = () => {
 
         <SonessButton linkUrl="contact-us" buttonText="Contact Us" />
       </Container>
-      <Footer />
     </Layout>
   )
 }

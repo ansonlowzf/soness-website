@@ -1,7 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import Footer from "../components/footer"
 
 import { Container, Grid, Typography } from "@material-ui/core"
 
@@ -99,7 +98,6 @@ const RecipePage = () => {
           </Typography>
         </Grid>
       </Container>
-      <Footer />
     </Layout>
   )
 }

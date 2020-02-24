@@ -4,10 +4,13 @@ import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import React from "react"
 import styled from "styled-components"
+import Contact from "../components/contact"
+import Faq from "../components/faq"
 import Heading2 from "../components/heading2"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import SonessButton from "../components/sonessButton"
+import { questionAnswers } from "../question-answer"
 
 const ImageBackground = styled(BackgroundImage)`
   background-position: center center;
@@ -16,7 +19,9 @@ const ImageBackground = styled(BackgroundImage)`
 `
 
 const useStyles = makeStyles({
-  sectionMarginBottom: `10em`,
+  sectionMarginBottom: {
+    marginBottom: `7.5em`,
+  },
 })
 
 const IndexPage = () => {
@@ -108,18 +113,33 @@ const IndexPage = () => {
       </Grid>
 
       <Heading2 title="Product" />
-      <Grid container justify="center" spacing={5}>
-        <Grid item xs={12} md={5}>
+      <Grid container justify="center" className={classes.sectionMarginBottom}>
+        <Grid item xs={11} md={3}>
           <Typography component="h3" variant="h6" align="center">
-            Product 1
+            Mixed Flower Honey
           </Typography>
-          <SonessButton buttonText="Check Out" />
+          <SonessButton
+            buttonText="Check Out"
+            linkUrl="/product/mixed-flower-honey"
+          />
         </Grid>
-        <Grid item xs={12} md={5}>
+        <Grid item xs={11} md={3}>
           <Typography component="h3" variant="h6" align="center">
-            Product 1
+            Royal Jelly
           </Typography>
-          <SonessButton buttonText="Check Out" />
+          <SonessButton buttonText="Check Out" linkUrl="/product/royal-jelly" />
+        </Grid>
+      </Grid>
+
+      <Heading2 title="Contact Me" />
+      <Contact />
+
+      <Heading2 title="Frequently Ask Question" />
+      <Grid container justify="center">
+        <Grid item xs={11} md={5}>
+          {questionAnswers.map(({ ...props }) => (
+            <Faq key="index" {...props} />
+          ))}
         </Grid>
       </Grid>
     </Layout>

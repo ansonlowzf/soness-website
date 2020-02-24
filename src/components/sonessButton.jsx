@@ -9,9 +9,8 @@ const useStyles = makeStyles({
   },
   buttonStyle: {
     padding: `0.75em 1.5em`,
-    fontWeight: `bold`,
-    letterSpacing: `1.5px`,
     margin: `3em auto`,
+    color: `white`,
   },
 })
 

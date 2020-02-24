@@ -16,7 +16,12 @@ const Footer = () => {
 
   return (
     <footer className={classes.root}>
-      <Typography align="center" variant="body1" component="p">
+      <Typography
+        align="center"
+        variant="body1"
+        component="p"
+        style={{ color: `white` }}
+      >
         © 2018 - {new Date().getFullYear()}, Son &amp; Ness Enterprise
       </Typography>
     </footer>
