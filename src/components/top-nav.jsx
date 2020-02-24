@@ -45,6 +45,7 @@ const NavLinks = [
   { title: `ABOUT US`, path: `/about-us` },
   { title: `PRODUCT`, path: `/product/mixed-flower-honey` },
   { title: `RECIPE`, path: `/recipe` },
+  { title: `SUPPLIER`, path: `/supplier` },
   { title: `CONTACT US`, path: `/contact-us` },
   { title: `FAQ`, path: `/faq` },
 ]
@@ -105,7 +106,7 @@ const TopNavigation = () => {
           activeClassName={classes.isActive}
         >
           <ListItem button>
-            <ListItemText primary={title} />
+            <ListItemText primary={title} style={{ fontWeight: 500 }} />
           </ListItem>
         </Link>
       ))}

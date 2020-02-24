@@ -5,7 +5,6 @@ import Img from "gatsby-image"
 import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import SonessButton from "../components/sonessButton"
 
 const useStyles = makeStyles({
   headingTopMargin: {
@@ -96,8 +95,15 @@ const AboutUs = () => {
           justify="center"
           className={classes.pictureMarginBottom}
         >
+          <Typography className={classes.headingTopMargin}>
+            {`How Do We Wholesale The Honey?`}
+          </Typography>
+          <Typography variant="body1" component="p" gutterBottom>
+            {`Bee farmer sell in a bundle. Then, We filtered and packed in 10kg food grade's bottle and wholesale in Kuala Lumpur. You get real raw honey, welcome you send to lab test.`}
+          </Typography>
+        </Grid>
+        <Grid item xs={12} md={5} className={classes.headingTopMargin}>
           <iframe
-            className={classes.headingTopMargin}
             title="visiting bee farm in Johor"
             width="560"
             height="300"
