@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import React from "react"
-import Footer from "../components/footer"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import SonessButton from "../components/sonessButton"
@@ -166,8 +165,6 @@ const AboutUs = () => {
         >
           Start Your Honey Business With Us
         </Typography>
-
-        <SonessButton linkUrl="contact-us" buttonText="Contact Us" />
       </Container>
     </Layout>
   )

@@ -132,7 +132,7 @@ const IndexPage = () => {
       </Grid>
 
       <Heading2 title="Contact Me" />
-      <Contact />
+      <Contact idPath="contact-me" />
 
       <Heading2 title="Frequently Ask Question" />
       <Grid container justify="center">
