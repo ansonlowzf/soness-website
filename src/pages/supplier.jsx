@@ -34,7 +34,6 @@ const SupplierPage = () => {
           >
             {` Recommended Supplier`}
           </Typography>
-          <Divider />
         </Grid>
 
         <Grid item xs={11} md={6}>
