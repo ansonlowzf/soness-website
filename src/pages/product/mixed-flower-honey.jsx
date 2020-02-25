@@ -103,7 +103,6 @@ const MixedFlowerHoneyPage = () => {
           </Typography>
         </Grid>
       </Grid>
-      <Footer />
     </Layout>
   )
 }

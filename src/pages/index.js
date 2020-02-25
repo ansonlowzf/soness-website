@@ -1,11 +1,16 @@
+import { Button, Grid, Typography } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core/styles"
+import { graphql, useStaticQuery } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 import React from "react"
 import styled from "styled-components"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
-import SEO from "../components/seo"
-
+import Contact from "../components/contact"
+import Faq from "../components/faq"
+import Heading2 from "../components/heading2"
 import Layout from "../components/Layout"
-import { Button, Grid, Typography } from "@material-ui/core"
+import SEO from "../components/seo"
+import SonessButton from "../components/sonessButton"
+import { questionAnswers } from "../question-answer"
 
 const ImageBackground = styled(BackgroundImage)`
   background-position: center center;
@@ -13,7 +18,14 @@ const ImageBackground = styled(BackgroundImage)`
   height: calc(100vh - 64px);
 `
 
+const useStyles = makeStyles({
+  sectionMarginBottom: {
+    marginBottom: `7.5em`,
+  },
+})
+
 const IndexPage = () => {
+  const classes = useStyles()
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "honey-in-bottle.jpg" }) {
@@ -32,6 +44,7 @@ const IndexPage = () => {
       <ImageBackground
         Tag="section"
         fluid={data.placeholderImage.childImageSharp.fluid}
+        style={{ marginBottom: `10em` }}
       >
         <Grid
           style={{
@@ -43,30 +56,27 @@ const IndexPage = () => {
           justify="center"
           alignItems="center"
         >
-          <Grid item style={{ padding: `1em` }}>
+          <Grid item xs={11} md={5} style={{ padding: `1em` }}>
             <Typography
               variant="h2"
               component="h1"
               gutterBottom
               style={{ color: `white` }}
             >
-              Son &amp; Ness Enterprise
+              {`Start Your Honey Business Today`}
             </Typography>
             <Typography
               variant="h4"
               component="p"
-              gutterBottom
+              paragraph
               style={{ color: `white`, marginBottom: `1em` }}
             >
-              Wholesales Raw Honey in Kuala Lumpur
+              {`Genuine Raw Honey Direct from Bee Farm`}
             </Typography>
-            <Link
-              to="/product/mixed-flower-honey"
-              style={{ textDecoration: `none` }}
-            >
+            <a href="#about" style={{ textDecoration: `none` }}>
               <Button
                 variant="contained"
-                aria-label="product page"
+                aria-label="about us"
                 color="secondary"
                 size="large"
                 style={{
@@ -75,12 +85,63 @@ const IndexPage = () => {
                   letterSpacing: `1.5px`,
                 }}
               >
-                Product &rarr;
+                Explore &rarr;
               </Button>
-            </Link>
+            </a>
           </Grid>
         </Grid>
       </ImageBackground>
+
+      <Heading2 title="ABOUT US" idPath="about" />
+      <Grid
+        container
+        direction="column"
+        alignItems="center"
+        className={classes.sectionMarginBottom}
+      >
+        <Grid item xs={11}>
+          <Typography variant="h4" component="h3" align="center" gutterBottom>
+            {`Son & Ness Enterprise`}
+          </Typography>
+        </Grid>
+        <Grid item xs={11} md={4}>
+          <Typography variant="body1" component="p" align="center" paragraph>
+            {`We wholesales raw honey from 10 kg onwards, start your honey business with low commitment`}
+          </Typography>
+        </Grid>
+        <SonessButton linkUrl={`/about-us`} buttonText={`Know More`} />
+      </Grid>
+
+      <Heading2 title="Product" />
+      <Grid container justify="center" className={classes.sectionMarginBottom}>
+        <Grid item xs={11} md={3}>
+          <Typography component="h3" variant="h6" align="center">
+            Mixed Flower Honey
+          </Typography>
+          <SonessButton
+            buttonText="Check Out"
+            linkUrl="/product/mixed-flower-honey"
+          />
+        </Grid>
+        <Grid item xs={11} md={3}>
+          <Typography component="h3" variant="h6" align="center">
+            Royal Jelly
+          </Typography>
+          <SonessButton buttonText="Check Out" linkUrl="/product/royal-jelly" />
+        </Grid>
+      </Grid>
+
+      <Heading2 title="Contact Me" />
+      <Contact idPath="contact-me" />
+
+      <Heading2 title="Frequently Ask Question" />
+      <Grid container justify="center">
+        <Grid item xs={11} md={5}>
+          {questionAnswers.map(({ ...props }) => (
+            <Faq key="index" {...props} />
+          ))}
+        </Grid>
+      </Grid>
     </Layout>
   )
 }

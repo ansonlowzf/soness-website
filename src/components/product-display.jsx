@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   headingTopMargin: {
-    marginTop: `1em`,
+    marginTop: `1.5em`,
   },
   textTopMargin: {
     marginTop: `2.5em`,
@@ -41,8 +41,8 @@ const ProductDisplay = ({
   return (
     <div className={classes.root}>
       <Typography
-        variant="h2"
         component="h1"
+        variant="h2"
         align="center"
         gutterBottom
         className={classes.headingTopMargin}

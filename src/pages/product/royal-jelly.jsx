@@ -39,7 +39,6 @@ const RoyalJellyPage = () => {
         previousProduct={previousProduct}
         nextProduct={nextProduct}
       />
-      <Footer />
     </Layout>
   )
 }
