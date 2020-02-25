@@ -1,4 +1,4 @@
-import { Button, Container, Grid, Typography } from "@material-ui/core"
+import { Button, Grid, Typography } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
