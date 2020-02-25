@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { Button, Grid, Typography } from "@material-ui/core"
-=======
 import { Container, Grid, Typography } from "@material-ui/core"
->>>>>>> e2157efe089666a397c764d30ecf92b6762097ce
 import { makeStyles } from "@material-ui/core/styles"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
@@ -26,6 +22,7 @@ const useStyles = makeStyles({
 const AboutUs = () => {
   const classes = useStyles()
 
+  //#region Photo Data
   const data = useStaticQuery(graphql`
     query {
       placeholderImage1: file(relativePath: { eq: "honey-with-wax.jpg" }) {
@@ -51,6 +48,7 @@ const AboutUs = () => {
       }
     }
   `)
+  //#endregion
 
   return (
     <Layout>
@@ -106,17 +104,21 @@ const AboutUs = () => {
             {`Bee farmer sell in a bundle. Then, We filtered and packed in 10kg food grade's bottle and wholesale in Kuala Lumpur. You get real raw honey, welcome you send to lab test.`}
           </Typography>
         </Grid>
-        <Grid item xs={12} md={5} className={classes.headingTopMargin}>
-          <iframe
-            title="visiting bee farm in Johor"
-            width="560"
-            height="300"
-            src="https://www.youtube.com/embed/lwPCWqd58WE"
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </Grid>
+
+        <iframe
+          title="visiting bee farm in Johor"
+          style={{
+            position: `relative`,
+            width: `100%`,
+            height: `300px`,
+            marginBottom: `3em`,
+          }}
+          src="https://www.youtube.com/embed/lwPCWqd58WE"
+          scrolling="no"
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
 
         <Grid
           container

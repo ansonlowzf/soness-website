@@ -1,11 +1,9 @@
+import { Divider, Grid, Typography } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core/styles"
+import { Language, Room } from "@material-ui/icons"
 import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import Footer from "../components/footer"
-
-import { Grid, Typography, Divider } from "@material-ui/core"
-import { makeStyles } from "@material-ui/core/styles"
-import { Language, Room } from "@material-ui/icons"
 
 const useStyles = makeStyles({
   headingTopMargin: {
@@ -80,7 +78,6 @@ const SupplierPage = () => {
           15 Jalan TSB 8, Taman Industri Sungai Buloh, 47000 Petaling Jaya
         </address>
       </Grid>
-      <Footer />
     </Layout>
   )
 }
