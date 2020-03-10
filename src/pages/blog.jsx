@@ -1,54 +1,66 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout"
+import SEO from "../components/seo"
 
-const BlogList = ({ data }) => {
+const BlogIndex = ({ data }) => {
+  const posts = data.allMdx.edges
+
   return (
     <Layout>
-      <div>
-        <h1
-          style={{ display: `inline-block`, borderBottom: `1px solid black` }}
-        >
-          Amazing Pandas Eating Things
-        </h1>
-        <h4>{data.allMdx.totalCount} Posts</h4>
-        {data.allMdx.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link
-              to={node.fields.slug}
-              style={{ textDecoration: `none`, color: `inherit` }}
-            >
-              <h3 style={{ marginBottom: `2em` }}>
-                {node.frontmatter.title}
-                <span style={{ color: `#bbb` }}>- {node.frontmatter.date}</span>
+      <SEO title="All posts" />
+      {posts.map(({ node }) => {
+        const title = node.frontmatter.title || node.fields.slug
+        return (
+          <article key={node.fields.slug}>
+            <header>
+              <h3
+                style={{
+                  marginBottom: `2em`,
+                }}
+              >
+                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                  {title}
+                </Link>
               </h3>
-              <p>{node.excerpt}</p>
-            </Link>
-          </div>
-        ))}
-      </div>
+              <small>{node.frontmatter.date}</small>
+            </header>
+            <section>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: node.excerpt,
+                }}
+              />
+            </section>
+          </article>
+        )
+      })}
     </Layout>
   )
 }
 
-export const query = graphql`
+export default BlogIndex
+
+export const pageQuery = graphql`
   query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
-      totalCount
       edges {
         node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-          }
+          excerpt
           fields {
             slug
           }
-          excerpt
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+          }
         }
       }
     }
   }
 `
-export default BlogList
