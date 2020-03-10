@@ -48,7 +48,7 @@ const NavLinks = [
   { title: `ABOUT US`, path: `/about-us` },
   { title: `PRODUCT`, path: `/product/mixed-flower-honey` },
   { title: `SUPPLIER`, path: `/supplier` },
-  { title: `RECIPE`, path: `/recipe` },
+  { title: `BLOG`, path: `/blog` },
 ]
 
 const Header = () => {

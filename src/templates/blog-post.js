@@ -4,6 +4,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
+import { Button, Container, Grid, Typography } from "@material-ui/core"
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.mdx
@@ -12,59 +13,74 @@ const BlogPostTemplate = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
-      <article>
-        <header>
-          <h1
-            style={{
-              marginTop: `1em`,
-              marginBottom: 0,
-            }}
-          >
-            {post.frontmatter.title}
-          </h1>
-          <p
-            style={{
-              display: `block`,
-              marginBottom: `1em`,
-            }}
-          >
-            {post.frontmatter.date}
-          </p>
-        </header>
-        <MDXRenderer>{post.body}</MDXRenderer>
-        <hr
-          style={{
-            marginBottom: `1em`,
-          }}
-        />
-      </article>
+      <Container maxWidth="sm" style={{ marginBottom: `7em` }}>
+        <article>
+          <header>
+            <Typography
+              component="h1"
+              variant="h3"
+              gutterBottom
+              style={{ marginTop: `2em` }}
+            >
+              {post.frontmatter.title}
+            </Typography>
+            <Typography
+              component="p"
+              variant="body1"
+              color="textSecondary"
+              paragraph
+            >
+              {post.frontmatter.date}
+            </Typography>
+          </header>
+          <Typography component="p" variant="body1">
+            <MDXRenderer>{post.body}</MDXRenderer>
+          </Typography>
+        </article>
+      </Container>
 
-      <nav>
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
+      <Container maxWidth="md" style={{ marginBottom: `7em` }}>
+        <nav>
+          <Grid container justify="space-between">
+            <Grid container item xs={6} justify="flex-start">
+              {previous && (
+                <Link
+                  to={previous.fields.slug}
+                  rel="prev"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Button
+                    variant="contained"
+                    aria-label="previous"
+                    color="primary"
+                    size="large"
+                  >
+                    ← {previous.frontmatter.title}
+                  </Button>
+                </Link>
+              )}
+            </Grid>
+            <Grid container item xs={6} justify="flex-end">
+              {next && (
+                <Link
+                  to={next.fields.slug}
+                  rel="next"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Button
+                    variant="contained"
+                    aria-label="next"
+                    color="primary"
+                    size="large"
+                  >
+                    {next.frontmatter.title} →
+                  </Button>
+                </Link>
+              )}
+            </Grid>
+          </Grid>
+        </nav>
+      </Container>
     </Layout>
   )
 }

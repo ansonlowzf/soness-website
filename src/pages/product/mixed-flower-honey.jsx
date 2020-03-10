@@ -1,7 +1,6 @@
 import { Divider, Grid, Typography } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import Footer from "../../components/footer"
 import Layout from "../../components/Layout"
 import ProductDisplay from "../../components/product-display"
 import SEO from "../../components/seo"

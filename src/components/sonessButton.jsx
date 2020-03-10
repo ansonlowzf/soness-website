@@ -22,7 +22,7 @@ const SonessButton = ({ linkUrl, buttonText }) => {
         <Link to={linkUrl} className={classes.linkStyle}>
           <Button
             variant="contained"
-            aria-label="about us"
+            aria-label={buttonText}
             color="primary"
             size="large"
             className={classes.buttonStyle}

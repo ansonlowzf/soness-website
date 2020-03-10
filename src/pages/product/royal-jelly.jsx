@@ -5,7 +5,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import { products } from "../../products"
 
 import ProductDisplay from "../../components/product-display"
-import Footer from "../../components/footer"
 
 const RoyalJellyPage = () => {
   const title = products[2].title
