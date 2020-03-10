@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Son & Ness Enterprise`,
-    description: `Wholesale Raw honey direct from bee farm in Malaysia. Resellers are welcome`,
+    description: `Wholesale raw honey direct from bee farm in Malaysia. Resellers are welcome`,
     author: `@Anson Low Z.F`,
     siteUrl: `https://www.soness.com.my`,
   },
@@ -14,6 +14,23 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          default: require.resolve("./src/components/Layout.jsx"),
+        },
+        extensions: [`.mdx`, `.md`],
+      },
+    },
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

@@ -15,8 +15,8 @@ import { Home, Menu, KeyboardArrowUp } from "@material-ui/icons"
 import { Link } from "gatsby"
 import React, { useState } from "react"
 
-import ScrollTop from "../components/back-to-top"
-import HideOnScroll from "./scroll-hide-header"
+import BackToTop from "./BackToTop"
+import HideHeaderOnScroll from "./HideHeaderOnScroll"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -110,7 +110,7 @@ const Header = () => {
   return (
     <>
       <div className={classes.root}>
-        <HideOnScroll>
+        <HideHeaderOnScroll>
           <AppBar position="fixed">
             <Container maxWidth="lg">
               <Toolbar style={{ justifyContent: `space-between` }}>
@@ -134,15 +134,15 @@ const Header = () => {
               </Toolbar>
             </Container>
           </AppBar>
-        </HideOnScroll>
+        </HideHeaderOnScroll>
         <Toolbar id="back-to-top-anchor" />
       </div>
 
-      <ScrollTop>
+      <BackToTop>
         <Fab color="secondary" size="large" aria-label="scroll back to top">
           <KeyboardArrowUp />
         </Fab>
-      </ScrollTop>
+      </BackToTop>
 
       <Hidden mdUp>
         <Drawer

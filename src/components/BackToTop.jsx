@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const ScrollTop = ({ children }) => {
+const BackToTop = ({ children }) => {
   const classes = useStyles()
 
   const trigger = useScrollTrigger({
@@ -38,4 +38,4 @@ const ScrollTop = ({ children }) => {
   )
 }
 
-export default ScrollTop
+export default BackToTop
