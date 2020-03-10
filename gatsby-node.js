@@ -1,13 +1,13 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const result = await graphql(
     `
-      {
+      query {
         allMdx(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
@@ -28,7 +28,7 @@ exports.createPages = async ({ graphql, actions }) => {
   )
 
   if (result.errors) {
-    throw result.errors
+    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
   }
 
   // Create blog posts pages.
@@ -53,10 +53,10 @@ exports.createPages = async ({ graphql, actions }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === `Mdx`) {
+  if (node.internal.type === "Mdx") {
     const value = createFilePath({ node, getNode })
     createNodeField({
-      name: `slug`,
+      name: "slug",
       node,
       value,
     })
