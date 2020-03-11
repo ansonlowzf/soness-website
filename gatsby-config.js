@@ -17,8 +17,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages/`,
+        name: `blog`,
+        path: `${__dirname}/blog`,
       },
     },
     {
@@ -27,7 +27,6 @@ module.exports = {
         defaultLayouts: {
           default: require.resolve("./src/components/Layout.jsx"),
         },
-        extensions: [`.mdx`, `.md`],
       },
     },
     `gatsby-transformer-remark`,
