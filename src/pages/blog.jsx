@@ -1,8 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { Container, Typography } from "@material-ui/core"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
+import Heading2 from "../components/heading2"
 
 const BlogIndex = ({ data }) => {
   const posts = data.allMdx.edges
@@ -10,29 +12,31 @@ const BlogIndex = ({ data }) => {
   return (
     <Layout>
       <SEO title="All posts" />
+      <Heading2 title="BLOG" />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <article key={node.fields.slug}>
-            <header>
-              <h3
-                style={{
-                  marginBottom: `1em`,
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.excerpt,
-                }}
-              />
-            </section>
+            <Container maxWidth="sm">
+              <header>
+                <Typography component="h3" variant="h5" gutterBottom>
+                  <Link to={node.fields.slug}>{title}</Link> -
+                </Typography>
+                <Typography component="p" variant="caption" paragraph>
+                  {node.frontmatter.date}
+                </Typography>
+              </header>
+              <section>
+                <Typography
+                  component="p"
+                  variant="body1"
+                  paragraph
+                  dangerouslySetInnerHTML={{
+                    __html: node.excerpt,
+                  }}
+                />
+              </section>
+            </Container>
           </article>
         )
       })}
