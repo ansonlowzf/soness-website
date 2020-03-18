@@ -26,7 +26,7 @@ const BlogIndex = ({ data }) => {
             <Container maxWidth="sm">
               <header>
                 <Typography component="h3" variant="h5" gutterBottom>
-                  <Link to={node.fields.slug}>{title}</Link> -
+                  <Link to={node.fields.slug}>{title}</Link>
                 </Typography>
                 <Typography component="p" variant="caption" paragraph>
                   {node.frontmatter.date}

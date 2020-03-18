@@ -68,15 +68,29 @@ const SupplierPage = () => {
         </Grid>
 
         <Language fontSize="large" style={{ marginTop: `1em` }} />
-        <a href="https://www.glassplastic.com/">
-          https://www.glassplastic.com/
-        </a>
+        <Typography component="p" variant="body1" align="center">
+          <a
+            href="https://www.glassplastic.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            https://www.glassplastic.com/
+          </a>
+        </Typography>
 
         <Room fontSize="large" style={{ marginTop: `1em` }} />
-        <a href="https://g.page/glassplasticsb?share">Google Maps</a>
-        <address>
-          15 Jalan TSB 8, Taman Industri Sungai Buloh, 47000 Petaling Jaya
-        </address>
+        <Typography component="p" variant="body1" align="center">
+          <a
+            href="https://g.page/glassplasticsb?share"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Google Maps
+          </a>
+        </Typography>
+        <Typography component="p" variant="body1" align="center">
+          {`15 Jalan TSB 8, Taman Industri Sungai Buloh, 47000 Petaling Jaya`}
+        </Typography>
       </Grid>
     </Layout>
   )
