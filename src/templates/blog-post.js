@@ -47,7 +47,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             <li>
               {previous && (
                 <Link to={previous.fields.slug} rel="prev">
-                  <Typography component="p" variant="body1">
+                  <Typography component="p" variant="h6">
                     ← {previous.frontmatter.title}
                   </Typography>
                 </Link>
@@ -56,7 +56,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             <li>
               {next && (
                 <Link to={next.fields.slug} rel="next">
-                  <Typography component="p" variant="body1">
+                  <Typography component="p" variant="h6">
                     {next.frontmatter.title} →
                   </Typography>
                 </Link>

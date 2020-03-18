@@ -4,7 +4,6 @@ import { Container, Typography } from "@material-ui/core"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
-import Heading2 from "../components/heading2"
 
 const BlogIndex = ({ data }) => {
   const posts = data.allMdx.edges
@@ -12,7 +11,14 @@ const BlogIndex = ({ data }) => {
   return (
     <Layout>
       <SEO title="All posts" />
-      <Heading2 title="BLOG" />
+      <Container
+        maxWidth="sm"
+        style={{ marginTop: `7rem`, marginBottom: `3rem` }}
+      >
+        <Typography component="h1" variant="h2" align="center" gutterBottom>
+          BLOG
+        </Typography>
+      </Container>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
