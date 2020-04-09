@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://soness.com.my/sitemap.xml
